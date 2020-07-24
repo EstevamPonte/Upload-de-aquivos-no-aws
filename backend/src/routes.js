@@ -24,7 +24,7 @@ routes.delete("/delete", async (req, res) => {
   Post.deleteOne({ _id: req.query.id}, (err, res) => {
     if (err) return handleError(err)
   })
-  return res.send(req.query.id)
+  return res.send("Exclusão feita com sucesso")
 })
 
 module.exports = routes
